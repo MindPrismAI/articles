@@ -1,18 +1,16 @@
 # Chapter 2: The Proof — MNIST Isn't the Product, It's the Signal
 
-## Why We Published MNIST Results (And What They Actually Mean)
+## Why We Ran MNIST (And What It Actually Proves)
 
-Two weeks ago, we posted this on our GitHub:
+Two weeks ago, we validated MindPrism on MNIST:
 
-> **"I tested MindPrism HDC on the MNIST dataset (5,000 train, 1,000 test) this morning and achieved 96.3% accuracy in multimodal mode (image + text). Training took only 27 seconds on a single CPU core (Intel® Core™ i7-10510U @ 1.80GHz), with inference taking 5 seconds for 1,000 images (~5ms per image). This is 400-600× faster than typical deep learning models with comparable accuracy."**
+> **96.3% accuracy in multimodal mode (image + text). Training: 27 seconds on a single CPU core (Intel® Core™ i7-10510U @ 1.80GHz). Inference: 5ms per image. 400-600× faster than typical deep learning models with comparable accuracy.**
 
-The response was predictable:
-- Skeptics: "MNIST is a toy dataset. Everyone gets 99%+ with CNNs."
-- Optimists: "This proves MindPrism is ready for production!"
+For most ML engineers, MNIST is a toy benchmark—something you run to test your training loop, not to prove a thesis. And they'd be right to dismiss it... if we were claiming "MNIST performance = product readiness."
 
-**Both groups missed the point.**
+**We're not.**
 
-MNIST isn't a product demo. It's a **systems validation test**. Here's what we were actually proving—and why it matters for investors.
+MNIST is a **systems validation test**. Here's what we were actually proving—and why it matters for investors betting on cognitive architectures.
 
 ---
 
@@ -307,13 +305,15 @@ It's not a research paper. It's not a simulation. It's a working system that:
 - Fits in 200MB of RAM
 - Learns online without catastrophic forgetting
 
-If you're an investor who believes:
-- Transformers are hitting diminishing returns
-- Edge AI is the next platform shift  
-- Explainability will be regulated into existence
-- Speed and cost matter more than 2% accuracy gains
+For investors evaluating cognitive architectures versus transformers:
+- Transformers are hitting diminishing returns on scaling
+- Edge AI demands models that fit in <200MB and run offline
+- Explainability is becoming a regulatory requirement
+- Speed and cost matter more than chasing the last 2% accuracy
 
-**...then you should be paying attention.**
+MNIST was a checkpoint. The architecture works. The math is sound. The primitives are stable.
+
+What comes next is proving it on production data—and that's a systems engineering problem, not a research gamble.
 
 ---
 
